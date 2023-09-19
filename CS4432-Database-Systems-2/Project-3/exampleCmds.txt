@@ -1,0 +1,17 @@
+--- Section 1 ---
+SELECT A.Col1, A.Col2, B.Col1, B.Col2 FROM A, B WHERE A.RandomV = B.RandomV
+
+--- Section 2 ---
+SELECT count(*) FROM A, B WHERE A.RandomV > B.RandomV
+
+
+--- Section 3 ---
+SELECT Col2, SUM(RandomV) FROM A GROUP BY Col2
+
+SELECT Col2, SUM(RandomV) FROM B GROUP BY Col2
+
+SELECT Col2, AVG(RandomV) FROM A GROUP BY Col2
+
+SELECT Col2, AVG(RandomV) FROM B GROUP BY Col2
+
+SELECT Col2, COUNT(RandomV) FROM B GROUP BY Col2

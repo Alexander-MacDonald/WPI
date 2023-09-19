@@ -1,0 +1,4 @@
+CREATE INDEX ON Project2Dataset (RandomV)
+SELECT * FROM Project2Dataset WHERE RandomV = 915
+SELECT * FROM Project2Dataset WHERE RandomV > 20 AND RandomV < 25
+SELECT * FROM Project2Dataset WHERE RandomV != 915
