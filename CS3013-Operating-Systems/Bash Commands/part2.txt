@@ -1,0 +1,58 @@
+1. What is the root directory? What is the command to change the current working directory to the root
+directory?
+	1a. The root directory is the highest directory in the hierarchy in the system's file system. The command to change the current working directory to the root for linux is "cd"
+	
+2. What is the command to create an empty file with the name foo.txt?
+	2a. The command to create an empty file with the name foo.txt is "touch foo.txt"
+
+3. What is the command to rename the file foo.txt to bar.txt.
+	3a. The command to rename the file foo.txt to bar.txt is "mv foo.txt bar.txt"
+
+4. What is the command to find location of the binary executable file for the ls utility? What is the
+output of running that command?
+	4a. The command to find the location of the binary executable file for the ls utility is "whereis ls". The output of this command is "ls: /usr/bin/ls"
+
+5. What is the command to print the username of the current user? What is the output of running that
+command?
+	5a. The command to print the username of the current user is either "echo $USER" or "whoami". It will print the username of the current user
+
+6. What are shell environment variables? What command will print out the current environment variables
+(note, you should not provide the output of this command)?
+	6a. Shell environment variables are those that, at that instance of the shell, provides to all processes. They are things like user, term, home, and path. The command to print out the current environment variables is "printenv"
+
+7. What is the command to print the name of the current shell? What is the output of running that
+command?
+	7a. The command to print specifically the name of the current shell is "echo $0". The output is "bash".
+
+8. What is the command to print out the kernel version of your Ubuntu OS? What is the output of
+running that command?
+	8a. The command to print out the kernel version of your Ubuntu OS is "uname -r" or "cat /proc/version". The output is "5.11.0-46-generic".
+	
+9. What is the command to list all files in the /bin/ directory whose filename starts with the string ch?
+What is the output of running that command? Note, the command must work regardless of the current
+working directory.
+	9a. The command to list all files in /bin/ that begin with the string "ch" is "find /bin/ -name 'ch*' -type f". The output is
+		/bin/chsh
+		/bin/chacl
+		/bin/cheese
+		/bin/chown
+		/bin/chvt
+		/bin/chattr
+		/bin/chage
+		/bin/choom
+		/bin/chrt
+		/bin/chfn
+		/bin/chardetect3
+		/bin/chcon
+		/bin/check-language-support
+		/bin/chgrp
+		/bin/chmod
+
+10. What is the command to count the number of files in your home directory? What is the output of
+running that command? Note that you should include hidden files in your count but exclude any
+subdirectories. Also, you should use the tilde character (~) to specify the user’s home directory.
+	10a. The commmand to list the number of files in the home directory including hidden files is "ls ~ -ap | grep -v / | wc -l"
+
+11. What is the command to search the current directory and all subdirectories for C source code files
+containing the pattern int i? The command should output only the filenames for the matching files.
+	11a. The command to list the file names in the current directory and all subdirectories is "grep -l --include=\*.{c,h} -r "int i""
